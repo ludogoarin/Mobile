@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="viewport" content = "width = device-width, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />    
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<title>iOS Scroll Control</title>
+	<style>
+		html, body{ 
+			font-family: Arial, Verdana; 
+			margin:0; 
+			padding: 0;
+			height:100%;
+		}
+			
+		#scrollable_block1{
+			padding: 10px;
+			height: 200px;
+			border: 1px solid #cc0000;
+			background: #efefef;
+		}
+		
+		.small_block{
+			margin: 20px 20px 0 0;
+			padding: 10px;
+			width: 100px;
+			height: 100px;
+			float: left;
+			border: 1px solid #cc0000;
+			background: #efefef;
+		}
+		
+		.scrollable{
+			overflow: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+		
+		p { margin-top: 0; }
+	</style>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js" ></script>
+	<script type="text/javascript" src="scrollControl.js"></script>
+
+</head>
+<body ontouchstart="scrollControl.touchStart(event)" ontouchmove="scrollControl.touchMove(event)">
+
+	<div id="scrollable_block1" class="scrollable">
+		<p>1. some content inside a panel3</p>
+		<p>2. some content inside a panel</p>
+		<p>3. some content inside a panel</p>
+		<p>4. some content inside a panel</p>
+		<p>some content inside a panel</p>
+		<p>some content inside a panel</p>
+		<p>some content inside a panel</p>
+		<p>some content inside a panel</p>
+		<p>some content inside a panel</p>
+	</div>
+	
+	<div class="small_block"></div>
+	
+	<div class="small_block"></div>
+	
+	<div class="scrollable small_block">
+		<div>
+		<p>some content inside a panel3</p>
+		<p>some content inside a panel</p>
+		<p>some content inside a panel</p>
+		<p>some content inside a panel</p>
+		</div>
+	</div>
+	
+	<div class="scrollable small_block">
+		<p>some content inside a panel3</p>
+		<p>some content inside a panel</p>
+		<p>some content inside a panel</p>
+		<p>some content inside a panel</p>
+	</div>
+
+</body>
+</html>
