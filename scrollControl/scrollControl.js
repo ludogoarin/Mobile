@@ -1,3 +1,7 @@
+/*
+ scrollControl 0.6 | (c) 2012-2013 Ludo Goarin. | github.com/ludogoarin | MIT License
+*/
+
 var scrollControl = {
     scrollClass: 'scrollable',
     startX: 0,
